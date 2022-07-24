@@ -101,11 +101,11 @@ const onLogoutHandler = (event: React.MouseEvent<HTMLElement>) => {
           return <div key={record.id} className={style.success}>
             <section className={style.content}>           
            <p className={style.psuccess}>Name</p>
-         <p>{record.fields.Name}</p>
+         <p className={style.fields}>{record.fields.Name}</p>
          <div> 
       <p className={style.psuccess}>Students</p>
       {record.fields.Students.map((id:any) =>{ 
-        return <span className={style.fields}>
+        return <span className={style.fields} key={id.id}>
         {studentData[id]}
         </span>
         })}
